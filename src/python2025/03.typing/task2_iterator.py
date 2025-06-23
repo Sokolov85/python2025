@@ -1,3 +1,4 @@
+# ruff: noqa: E501
 # написать функцию генератор, которая принимает строку вида 'port trunk allow-pass vlan <vlans>'
 # и на каждой итерации возвращает очередной vlan из разрешенных на порту, при этом vlan внутри
 # диапазонов ' to ' не теряются, а так же возвращаются. Т.е.
@@ -5,6 +6,7 @@
 #  - port trunk allow-pass vlan 10 13       -> результат 10, 13
 #  - port trunk allow-pass vlan 10 to 13    -> результат 10, 11, 12, 13
 #  - port trunk allow-pass vlan 10 to 13 15 -> результат 10, 11, 12, 13, 15
+# ruff: noqa
 
 
 def unrange_huawei_vlans(allow_pass_vlan_line: str):
